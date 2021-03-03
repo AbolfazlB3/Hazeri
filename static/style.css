@@ -1,0 +1,18 @@
+body {
+  height: auto;
+  width: 400px;
+  outline: none;
+  font-size: 18px;
+  color: white;
+  background-color: gray;
+}
+
+label {
+  display: block;
+  font: 1rem "Fira Sans", sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
