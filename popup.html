@@ -3,30 +3,26 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/toggle.css">
 
   </head>
   <body>
-    <h1> حاضری بزنیم؟ </h1>
+    <h1 id="htitle"> حاضری بزنیم؟ </h1>
+    <div id="onoff">
+      <label class="switch">
+        <input type="checkbox">
+        <div><span></span></div>
+      </label>
+    </div>
     <button id="new_row"> یکی دیگه </button>
 
     <div id="main_form">
-      <!-- <div id="row0">
-        <input type="checkbox" title="اگه میخوای کار کنه تیکش رو بزن">
-        <input class="message-text" placeholder="متن رو اینجا بزار">
-        <input type="time" min="00:00" max="23:59" value="08:05" required>
-        <button id="button-0" onclick="myrow0();"> حذف </button>
-        <script>
-          function myrow0() {
-            var myobj = document.getElementById("row0");
-            myobj.remove();
-          }
-        </script>
-      </div> -->
 
     </div>
 
     <button id="send_btn"> حاضر </button>
-    <script type="text/javascript" src="popup.js"></script>
+    <script type="module" src="popup.js"></script>
   </body>
 </html>
+
 

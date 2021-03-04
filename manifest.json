@@ -1,8 +1,8 @@
 {
-  "name": "click-product-addtocart-button",
-  "description": "Click a button with ID=product-addtocart-button",
+  "name": "Hazeri",
+  "description": "Hazeri Bezan!",
   "manifest_version": 2,
-  "version": "0.1",
+  "version": "1.0",
 
   "permissions": [
     "activeTab",

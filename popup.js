@@ -1,5 +1,5 @@
 
-
+import CommandList from './src/CommandList.js'
 
 // var btn = document.getElementById('send_btn');
 
@@ -47,6 +47,40 @@ function delete_element(e) {
   e.remove();
   // Further work with element ...
 }
+
+
+function random_color() {
+  return '#'+(Math.random() * 0xFFFFFF << 0).toString(16).padStart(6,'0');
+}
+
+
+
+setTimeout(() => {
+  var e = document.getElementById('htitle');
+  chrome.storage.sync.get("color", ({ color }) => {
+    e.style.backgroundColor = color;
+    e.innerHTML = color;
+  });
+  //chrome.storage.sync.set({ color: "#555" });
+}, 0);
+
+const a = new CommandList()
+
+
+
+
+
+var lab = document.getElementById('onoff').getElementsByTagName('label')[0]
+
+var inp = lab.getElementsByTagName('input')[0]
+
+
+inp.addEventListener("change", ()=>{
+  console.log(inp.checked)
+})
+
+
+
 
 
 // $(document).ready(function(){
