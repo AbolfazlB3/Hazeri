@@ -3,6 +3,20 @@
 let color = '#3aa757';
 
 chrome.storage.sync.set({ color });
+
+var id = null;
+
+function start_logging() {
+  id = setInterval(() => {
+    console.log("hello")
+  }, 1000)
+}
+
+function stop_logging() {
+  clearInterval(id)
+}
+
+
 //console.log('Default background color set to %cgreen', `color: ${color}`);
 
 

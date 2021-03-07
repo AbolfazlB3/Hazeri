@@ -1,5 +1,7 @@
 
 import CommandList from './src/CommandList.js'
+import parseHtml from './src/DOMParser.js';
+import ProfileManager from './src/ProfileManager.js';
 
 // var btn = document.getElementById('send_btn');
 
@@ -23,8 +25,8 @@ import CommandList from './src/CommandList.js'
 //   });
 // });
 
+/*
 document.getElementById("new_row").onclick = function addNewRow() {
-  console.log(":)))) ");
   var element = document.getElementById("main_form");
   var id = Math.floor(Math.random() * 1000000);
 
@@ -41,6 +43,18 @@ document.getElementById("new_row").onclick = function addNewRow() {
   element.append(obj);
   delbtn.addEventListener("click", () => obj.remove())
 }
+*/
+
+
+
+const PM = new ProfileManager()
+PM.addNewProfile()
+PM.setActiveProfile(PM.list[0])
+
+
+document.getElementById("new_row").addEventListener('click', event => {
+  PM.addNewCommand()
+});
 
 
 function delete_element(e) {
@@ -64,7 +78,6 @@ setTimeout(() => {
   //chrome.storage.sync.set({ color: "#555" });
 }, 0);
 
-const a = new CommandList()
 
 
 
@@ -80,6 +93,18 @@ inp.addEventListener("change", ()=>{
 })
 
 
+document.getElementById('st').addEventListener("click", () => {
+  chrome.runtime.getBackgroundPage(function(backgroundPage){
+    backgroundPage.start_logging()
+  })
+})
+
+
+document.getElementById('fs').addEventListener("click", () => {
+  chrome.runtime.getBackgroundPage(function(backgroundPage){
+    backgroundPage.stop_logging()
+  })
+})
 
 
 
